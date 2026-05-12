@@ -32,7 +32,7 @@ procesarDatosPromesa([1, 2, 3, 4, 5])
   .then((resultado) => {
     console.log("Ejercicio 2 - Resultado:", resultado);
     // Output: [1, 4, 9, 16, 25]
-  });
+});
  
  
 
@@ -67,7 +67,7 @@ duplicar([1, 2, 3, 4, 5])
   .then((resultado) => {
     console.log("Ejercicio 3 - Al cuadrado:", resultado);
     // Output: [4, 16, 36, 64, 100]
-  });
+});
  
  
 
@@ -159,7 +159,7 @@ Promise.all([operacionA(numeros), operacionB(numeros)])
   })
   .catch((error) => {
     console.error("Ejercicio 6 - Error:", error.message);
-  });
+});
  
  
 
