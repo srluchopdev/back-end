@@ -32,7 +32,7 @@ procesarDatosPromesa([1, 2, 3, 4, 5])
   .then((resultado) => {
     console.log("Ejercicio 2 - Resultado:", resultado);
     // Output: [1, 4, 9, 16, 25]
-});
+ });
  
  
 
