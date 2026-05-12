@@ -1,10 +1,21 @@
-// ============================================================
-// EJERCICIO 2: Promesas
-// ============================================================
-// Se convierte la función del ejercicio 1 para que retorne
-// una Promesa en lugar de usar un callback.
+function procesarDatosCallback(numeros, callback) {
+  console.log("Procesando datos...");
  
-function procesarDatos(numeros) {
+  setTimeout(() => {
+    const resultado = numeros.map((n) => n * n);
+    callback(resultado);
+  }, 500);
+}
+ 
+// Uso:
+procesarDatosCallback([1, 2, 3, 4, 5], (resultado) => {
+  console.log("Ejercicio 1 - Resultado:", resultado);
+  // Output: [1, 4, 9, 16, 25]
+});
+
+//evolucion del ejercicio 1
+
+function procesarDatosPromesa(numeros) {
   return new Promise((resolve) => {
     setTimeout(() => {
       const resultado = numeros.map((n) => n * n);
@@ -14,9 +25,9 @@ function procesarDatos(numeros) {
 }
  
 // Uso:
-procesarDatos([1, 2, 3, 4, 5])
+procesarDatosPromesa([1, 2, 3, 4, 5])
   .then((resultado) => {
-    console.log("Resultado:", resultado);
+    console.log("Ejercicio 2 - Resultado:", resultado);
     // Output: [1, 4, 9, 16, 25]
   });
- 
+  
